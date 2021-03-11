@@ -548,6 +548,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1521367913460970997, guid: 688ecc9ae152f5d41bcad452dd972892,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3ac016530d7ae8b48bc7f29b74c1b866, type: 2}
+    - target: {fileID: 2742765472215593389, guid: 688ecc9ae152f5d41bcad452dd972892,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fbcca9cfaba21549870117ef1637dbc, type: 2}
+    - target: {fileID: 4497713311084875218, guid: 688ecc9ae152f5d41bcad452dd972892,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c2a6b36494390654f892380b39caf35a, type: 2}
+    - target: {fileID: 4504778966006372531, guid: 688ecc9ae152f5d41bcad452dd972892,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b7e0501a0b32eb641a1b2292988d4f65, type: 2}
     - target: {fileID: 4616138263564771695, guid: 688ecc9ae152f5d41bcad452dd972892,
         type: 3}
       propertyPath: m_RootOrder
@@ -603,6 +623,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5184107983453642822, guid: 688ecc9ae152f5d41bcad452dd972892,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 448e09b67ee868e4f83db5a494ef3b4f, type: 2}
+    - target: {fileID: 6756004929181715258, guid: 688ecc9ae152f5d41bcad452dd972892,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3ac016530d7ae8b48bc7f29b74c1b866, type: 2}
     - target: {fileID: 7450134094862536733, guid: 688ecc9ae152f5d41bcad452dd972892,
         type: 3}
       propertyPath: m_Name

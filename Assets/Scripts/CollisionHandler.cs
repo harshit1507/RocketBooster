@@ -12,7 +12,7 @@ public class CollisionHandler : MonoBehaviour
 
     AudioSource audioSource;
 
-    bool isTransitioning = false;
+    bool isCollided = false;
 
     private void Start()
     {
@@ -20,7 +20,7 @@ public class CollisionHandler : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(isTransitioning)
+        if(isCollided)
         {
             return; 
         }
@@ -42,7 +42,7 @@ public class CollisionHandler : MonoBehaviour
     private void StartSuccessSequence()
     {
         // TODO add particle effect upon success
-        isTransitioning = true;
+        isCollided = true;
         audioSource.Stop();
         audioSource.PlayOneShot(success);
         GetComponent<Movement>().enabled = false;
@@ -52,7 +52,7 @@ public class CollisionHandler : MonoBehaviour
     private void StartCrashSequence()
     {
         // TODO add particle effect upon crash
-        isTransitioning = true;
+        isCollided = true;
         audioSource.Stop();
         audioSource.PlayOneShot(crash);
         GetComponent<Movement>().enabled = false;
