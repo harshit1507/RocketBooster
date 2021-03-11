@@ -12,12 +12,19 @@ public class CollisionHandler : MonoBehaviour
 
     AudioSource audioSource;
 
+    bool isTransitioning = false;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
     private void OnCollisionEnter(Collision collision)
     {
+        if(isTransitioning)
+        {
+            return; 
+        }
+
         switch(collision.gameObject.tag)
         {
             case "Friendly":
@@ -35,6 +42,8 @@ public class CollisionHandler : MonoBehaviour
     private void StartSuccessSequence()
     {
         // TODO add particle effect upon success
+        isTransitioning = true;
+        audioSource.Stop();
         audioSource.PlayOneShot(success);
         GetComponent<Movement>().enabled = false;
         Invoke("LoadNextLevel", levelLoadDelay);
@@ -43,6 +52,8 @@ public class CollisionHandler : MonoBehaviour
     private void StartCrashSequence()
     {
         // TODO add particle effect upon crash
+        isTransitioning = true;
+        audioSource.Stop();
         audioSource.PlayOneShot(crash);
         GetComponent<Movement>().enabled = false;
         Invoke("ReloadLevel", levelLoadDelay);
