@@ -11,8 +11,11 @@ public class Movement : MonoBehaviour
     [SerializeField] ParticleSystem mainBoosterParticle;
     [SerializeField] ParticleSystem leftThrusterParticle;
     [SerializeField] ParticleSystem rightThrusterParticle;
+    [SerializeField] GameObject game;
     Rigidbody rb;
     AudioSource audioSource;
+
+    bool start = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,10 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!start)
+        {
+            return;
+        }
         ProcessThrust();
         ProcessRotation();
     }
@@ -103,5 +110,11 @@ public class Movement : MonoBehaviour
         rb.freezeRotation = true;   // freezing rotation so we can manuallly rotate
         transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
         rb.freezeRotation = false;   // unfreezing rotation so the physics system take over
+    }
+
+    public void ButtonClick()
+    {
+        start = true;
+        game.SetActive(false);
     }
 }
